@@ -1,3 +1,9 @@
+* {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body,
 html {
   margin: 0;
@@ -7,7 +13,7 @@ html {
 }
 
 body {
-  background: url(./assets/images/bg-image.jpg) no-repeat center center fixed;
+  background: url(https://cdn.discordapp.com/attachments/1185299506993057816/1309629685776252978/background.png?ex=67424730&is=6740f5b0&hm=a52f442459ad567bfc80f3beb185219e4d744fc8d04b4433c59fdbe238083809&) no-repeat center fixed;
   background-size: cover;
 }
 
@@ -54,8 +60,26 @@ ul {
   padding: 2em;
 }
 
+@keyframes running-glowing-edges {
+  0% {
+    border-color: rgb(255, 255, 255);
+  }
+  25% {
+    border-color: rgb(0, 0, 0);
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+  75% {
+    border-color: rgb(0, 0, 0);
+  }
+  100% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+
 ul > li {
-  background-color: #fffa;
+  background-color: transparent;
   backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   border-radius: 10em;
@@ -63,9 +87,15 @@ ul > li {
   margin: 1.4em 0;
   box-shadow: rgb(28, 32, 93 / 24%) 0px 2px 8px 0px;
   transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: running-glowing-edges 2.2s linear infinite;
 }
 
 ul > li:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
 }
 
