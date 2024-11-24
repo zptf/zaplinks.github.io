@@ -13,8 +13,7 @@ html {
 }
 
 body {
-  background: url(https://cdn.discordapp.com/attachments/1185299506993057816/1309629685776252978/background.png?ex=67424730&is=6740f5b0&hm=a52f442459ad567bfc80f3beb185219e4d744fc8d04b4433c59fdbe238083809&) no-repeat center fixed;
-  background-size: cover;
+  background-color: black;
 }
 
 main {
