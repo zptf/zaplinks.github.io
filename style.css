@@ -13,7 +13,11 @@ html {
 }
 
 body {
-  background-color: black;
+  background: url(background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 1500px 750px;
 }
 
 main {
@@ -77,8 +81,12 @@ ul {
   }
 }
 
-ul > li {
-  background-color: transparent;
+ul > a {
+  text-decoration: none;
+}
+
+ul > a > li {
+  background-color: rgba(0, 0, 0, 0.505);
   backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   border-radius: 10em;
@@ -92,18 +100,17 @@ ul > li {
   animation: running-glowing-edges 2.2s linear infinite;
 }
 
-ul > li:hover {
+ul > a > li:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   border-color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
 }
 
-ul > li > a {
+a > li > span {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  text-decoration: none;
   color: white;
 }
 
