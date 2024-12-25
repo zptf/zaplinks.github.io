@@ -13,11 +13,11 @@ html {
 }
 
 body {
-  background: url(background.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 1500px 750px;
+  margin: 0; /* Remove default margin to prevent white edges */
+  padding: 0; /* Remove default padding */
+  background: url(background.png) no-repeat center center fixed; /* Combine properties for brevity */
+  background-size: cover; /* Ensure the background image covers the entire viewport */
+  min-height: 100%; /* Ensure the body is at least the height of the viewport */
 }
 
 main {
